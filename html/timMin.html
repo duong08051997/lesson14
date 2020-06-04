@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị nhỏ nhất của mảng</title>
+</head>
+<body>
+<script>
+    let arr1 = [3, 5, 1, 8, -3, 7, 8];
+
+    let arr2 = [7, 12, 6, 9, 20, 56, 89];
+
+    let arr3 = [];
+
+    let arr4 = [0, 0, 0, 0, 0, 0];
+
+    //hàm tìm min
+    function minArray(arr) {
+        if (arr.length === 0) {     //tìm tập rỗng và thay thế
+            arr[0] = -1;
+        }
+        let min = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        return min;
+
+    }
+
+    min1 = minArray(arr1);
+    document.write(min1 + "<br>");
+    min2 = minArray(arr2);
+    document.write(min2 + "<br>");
+    min3 = minArray(arr3);
+    document.write(min3 + "<br>");
+    min4 = minArray(arr4);
+    document.write(min4 + "<br>");
+
+    //hàm đếm kí tự số trong mảng
+    function countNUmber(arr) {
+        let count = 0;
+        for (let i = 1; i < arr.length + 1; i++) {
+            if (arr.length > 0) {
+                count = i;
+            }
+        }
+        return count;
+
+    }
+
+    count = countNUmber(arr1);
+    document.write(`số phần tử trong mảng 1 là  ${count}`);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<p>
+    <label>Chuyển đổi nhiệt độ</label>
+    <input  type="number" placeholder="Độ C"
+           oninput="changeTemperature(this.value)"
+           onchange="changeTemperature(this.value)">
+</p>
+<p>Độ F: <span id="result"></span></p>
+<script>
+
+    function changeTemperature(doC) {
+            doC = parseFloat(doC);
+        document.getElementById('result').innerHTML=1.8 * doC + 32;
+
+    }
+</script>
+</body>
+</html>
